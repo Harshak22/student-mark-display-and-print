@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<center>
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+</head>
+<body bgcolor="lavender">
+<div>
+<h1>Admin Login</h1>
+<form action="/loginform" method="post">
+    <h2></h2>Username:<br>
+    <input type="text" name="username"></br>
+    Password:<br>
+    <input name="password"></br><br>
+    <input type="submit" value="Login">
+</form>
+</div>
+<div>
+<h1>{{info}}</h1>
+</div>
+<div class="container">
+        <a class="btn btn-primary" href="{{url_for('slogin')}}" role="button">Student login</a>
+     </div>
+</body>
+</center>
+</html>

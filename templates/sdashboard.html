@@ -1,0 +1,88 @@
+<html>
+<head>
+    <title>student profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="p-3 mb-2 bg-primary text-white text-center">
+    <h1>STUDENT PROFILE</h1>
+</div>
+<table class="table table-bordered table-dark">
+  <tbody>
+    <tr>
+      <td>NAME:{{d.1}}</td>
+      <td>SCHOOL YEAR:{{d.4}}</td>
+      <td>Email id:{{d.2}}</td>
+    </tr>
+    <tr>
+      <td> EXAM TYPE:{{d.6}}</td>
+      <td>CLASS:BSC</td>
+      <td>EXAM DATE:{{d.5}}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="container">
+    <h2>STUDENT MARKS</h2>
+    <form method="GET" action="/studentpage/{{d.0}}">
+    <table class="table table-bordered" >
+        <thead>
+            <tr>
+                <th scope="col">Subjects</th>
+                <th scope="col">Mark</th>
+                <th scope="col">Remark</th>
+                <th grade="col">Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Maths</th>
+            <td>{{d.7}}</td>
+            {% if d.7>=45 %}
+            <td><p style="color:green">Pass</p></td>
+            {% else %}
+            <td><p style="color:red">Fail</p></td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th scope="row">Chemistry</th>
+            <td>{{d.8}}</td>
+            {% if d.8>=45 %}
+            <td><p style="color:green">Pass</p></td>
+            {% else %}
+            <td><p style="color:red">Fail</p></td>
+            {% endif %}
+
+        </tr>
+        <tr>
+            <th scope="row">English</th>
+            <td>{{d.9}}</td>
+            {% if d.9>=45 %}
+            <td><p style="color:green">Pass</p></td>
+            {% else %}
+            <td><p style="color:red">Fail</p></td>
+            {% endif %}
+        </tr>
+        <tr>
+            <th scope="row">Biology</th>
+            <td>{{d.10}}</td>
+            {% if d.10>=45 %}
+            <td><p style="color:green">Pass</p></td>
+            {% else %}
+            <td><p style="color:red">Fail</p></td>
+            {% endif %}
+        </tr>
+        </tbody>
+    </table>
+    </form>
+</div>
+
+    <div>
+    <a class="btn btn-primary" href="/logout" role="button">Logout</a>
+</div>
+<br>
+    <div>
+        <a class="btn btn-primary" title="print screen" alt="print screen" onclick="window.print();" target="_blank" style="cursor:pointer;">Print</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Details page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <div class="p-3 mb-2 bg-primary text-white text-center">
+  <h1>STUDENT DETAILS</h1>
+  </div>
+    <body>
+        <h1>Edit Student Detail</h1>
+        <form method="POST" action="/update/{{d.0}}">
+            <table>
+                <tr><td>Name:</td>
+                    <td><input type="text" name="name" value="{{d.1}}"/></tr></td>
+                <tr><td>Email:</td>
+                    <td><input type="text" name="Email" value="{{d.2}}"/></tr></td>
+                <tr><td>Password:</td>
+                    <td><input type="text" name="password" value="{{d.3}}"/></tr></td>
+                <tr><td>Maths:</td>
+                    <td><input type="number" name="Maths" value="{{d.7}}"/></tr></td>
+                <tr><td>Chemistry:</td>
+                    <td><input type="number" name="Chemistry" value="{{d.8}}"/></tr></td>
+                <tr><td>English:</td>
+                    <td><input type="number" name="English" value="{{d.9}}"/></tr></td>
+                 <tr><td>Biology</td>
+                    <td><input type="number" name="Biology" value="{{d.10}}"/></tr></td>
+                <tr><td></td>
+                <tr><td>Year:</td>
+                    <td><input type="number" name="year" value="{{d.4}}"/></tr></td>
+                <tr><td>Exam type:</td>
+                    <td><input type="text" name="examtype" value="{{d.6}}"/></tr></td>
+                 <tr><td>Exam date:</td>
+                    <td><input type="date" name="examdate" value="{{d.5}}"/></tr></td>
+                    <td><input type="submit" name="send" value="Update"/></tr></td>
+
+
+            </table>
+        </form>
+    <a class="btn btn-primary" href="/home" role="button">Home</a>
+    </body>
+</body>
+</html>
